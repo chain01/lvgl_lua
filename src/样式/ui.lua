@@ -65,10 +65,13 @@ local function create()
     --子对象不继承父对象样式，可以看文本颜色区别
     --默认当子对象没有样式的时候会继承父对象
     lvgl.obj_set_style(obj2, my_style1)
-    label2 = lvgl.label_create(obj2, nil)
-    lvgl.label_set_text(label2, "不透明")
-    lvgl.obj_align(label2, nil, lv_align_t[5], 0, 0)
-
+    -- label2 = lvgl.label_create(obj2, nil)
+    -- lvgl.label_set_text(label2, "不透明")
+    -- lvgl.obj_align(label2, nil, lv_align_t[5], 0, 0)
+    my_style1.
+    label3 = lvgl.label_create(obj2, nil)
+    lvgl.label_set_text(label3, lvgl.SYMBOL_OK)
+    lvgl.obj_align(label3, nil, lv_align_t[5], 0, 0)
 
     lvgl.disp_load_scr(scr0)
 end
