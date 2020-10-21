@@ -29,7 +29,7 @@ module(...,package.seeall)
 local function init()
     local para =
     {
-        width = 160, --分辨率宽度，128像素；用户根据屏的参数自行修改
+        width = 128, --分辨率宽度，128像素；用户根据屏的参数自行修改
         height = 128, --分辨率高度，160像素；用户根据屏的参数自行修改
         bpp = 16, --位深度，彩屏仅支持16位
         bus = disp.BUS_SPI4LINE, --LCD专用SPI引脚接口，不可修改
@@ -125,7 +125,7 @@ local function init()
             0x3A, --65k mode
             0x00030005,
             0x36, --MX, MY, RGB mode
-            0x00030060,--my mx mv ml  0110
+            0x00030068,--my mx mv ml  0110
             0x29, --Display on
             0x00010000+120,--Delay 120ms
         },
